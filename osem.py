@@ -1,31 +1,8 @@
 from itertools import permutations
 import sys
+import korp
 
-special_chars = ['á', 'ó', 'ý', 'č', 'ľ', 'ú', 'ť', 'ä', 'ž', 'š', 'í', 'é', 'ô', 'ň', 'ŕ', 'ď', 'ĺ', 'ö', 'ě', 'è', 'ü', 'ř', 'ê', 'à', 'å']
-replacement_chars = ['a', 'o', 'y', 'c', 'l', 'u', 't', 'a', 'z', 's', 'i', 'e', 'o', 'n', 'r', 'd', 'l', 'o', 'e', 'e', 'u', 'r', 'e', 'a', 'a']
-def word_diacritics(w):
-    w1 = ''
-    for l in w:
-        if not l.isascii():
-            w1 = w1 + replacement_chars[special_chars.index(l)]
-        else:
-            w1 = w1 + l
-    return w1
-
-# setup db
-def setup_korpus(diacritics):
-    words = {'ahoj'}
-    korpusname = 'db_slov/'
-    if diacritics:
-        korpusname = korpusname + 'kratky_korpus.txt'
-    else:
-        korpusname = korpusname + 'kratky_korpus_bez_diakritiky.txt'
-    with open(korpusname, "r", encoding='UTF-8') as searchfile:
-        for line in searchfile:
-            words.add(line.strip())
-    return words
-
-korpus = setup_korpus(diacritics=False)
+korpus = korp.setup_korpus(diacritics=False, language='cz')
 
 # zadanie = """
 # fhoihrebarsoraijx
@@ -39,7 +16,18 @@ korpus = setup_korpus(diacritics=False)
 # musebrrakcijovdsb"""
 
 zadanie = """
-"""
+ANOGITNAQŠVEJKM
+AGAKOHÓUČKELLSA
+DOSTOJIDIOTJEIC
+YÁONASEIYMTETTH
+LIUPTRMNEOTVOŘP
+LCKVNÍTAEOKFÁPO
+4ÍNOOSOYJCROZAI
+8APHŠKNIHOROGAR
+9OPALIUZDNCAMRO
+1RLIEQLOTAUHIJT
+ÍCÍSHAROMEOAREX"""
+
 def ries_riadok(r, l):
     # print(r, l)
     for i in range(len(r)-l+1):
@@ -89,5 +77,6 @@ def ries(minlength=5, maxlength=12):
             ries_riadok(r3[::-1], l)
 
 if __name__ == "__main__":
+    zadanie = korp.word_diacritics(zadanie.lower())
     ries()
     print('DONE')

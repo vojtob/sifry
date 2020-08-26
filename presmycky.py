@@ -1,20 +1,8 @@
 from itertools import permutations
 import sys
+import korp
 
-# setup db
-def setup_korpus(diacritics):
-    words = {'ahoj'}
-    korpusname = 'db_slov/'
-    if diacritics:
-        korpusname = korpusname + 'kratky_korpus.txt'
-    else:
-        korpusname = korpusname + 'kratky_korpus_bez_diakritiky.txt'
-    with open(korpusname, "r", encoding='UTF-8') as searchfile:
-        for line in searchfile:
-            words.add(line.strip())
-    return words
-
-korpus = setup_korpus(diacritics=False)
+korpus = korp.setup_korpus(diacritics=False, language='cz')
 
 def presmycky(word):
     perm = list(permutations(word))
