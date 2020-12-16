@@ -41,3 +41,4 @@ def countwords(korpus):
     for w in korpus:
         lens[len(w)] = 1 + lens[len(w)]
     print(lens)
+    return words

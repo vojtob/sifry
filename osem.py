@@ -16,12 +16,17 @@ korpus = korp.setup_korpus(diacritics=False, language='sk')
 # musebrrakcijovdsb"""
 
 zadanie = """
-OVNPPEZZPA
-KLAAĽKKODE
-AČÚVAČÁAIO
-STLDAVNEJS
-CEÝTMELAVÁ
-MHAIEERRNÁ"""
+ANOGITNAQŠVEJKM
+AGAKOHÓUČKELLSA
+DOSTOJIDIOTJEIC
+YÁONASEIYMTETTH
+LIUPTRMNEOTVOŘP
+LCKVNÍTAEOKFÁPO
+4ÍNOOSOYJCROZAI
+8APHŠKNIHOROGAR
+9OPALIUZDNCAMRO
+1RLIEQLOTAUHIJT
+ÍCÍSHAROMEOAREX"""
 
 def ries_riadok(r, l):
     # print(r, l)
