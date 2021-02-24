@@ -1,2 +1,7 @@
 
-__pycache__/korp.cpython-37.pyc
+__pycache__/
+.vscode/
+db_slov/cz_korpus.txt
+db_slov/cz_korpus_bez_diakritiky.txt
+db_slov/cz_korpusOLD.txt
+db_slov/jedlo.txt
