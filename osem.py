@@ -16,17 +16,26 @@ korpus = korp.setup_korpus(diacritics=False, language='sk')
 # musebrrakcijovdsb"""
 
 zadanie = """
-ANOGITNAQŠVEJKM
-AGAKOHÓUČKELLSA
-DOSTOJIDIOTJEIC
-YÁONASEIYMTETTH
-LIUPTRMNEOTVOŘP
-LCKVNÍTAEOKFÁPO
-4ÍNOOSOYJCROZAI
-8APHŠKNIHOROGAR
-9OPALIUZDNCAMRO
-1RLIEQLOTAUHIJT
-ÍCÍSHAROMEOAREX"""
+MUNOSKXXXXXXRTRÁURBE
+PFÁAIPZOXXXXXEBTMÔPR
+DOMJACJZHZEMERRBREST
+ŽOASHAJEARKKEEKAÁTMA
+NSULJNLGHAABDJKÚOELA
+JÚEĽÍĽVITAKMČÔVIRNAD
+LLTEIČHCDJLIÚAMKNNLZ
+LNLPSKETAAUYRNELTÍAJ
+OÁINEUŠKIČAKCDKÁVOZA
+KUYVENYMŽOPELRSKÍOVY
+ÁÍEKATSNÓDAĎROSELLRN
+ETKRERŽŇŽOTŤIEAOŽPDE
+RMDÔNPKSTDČŽKATDCKBO
+ESEEIAILSDIEOIUIAJME
+RBTNARSŽEUEIRTRCPÚEČ
+CČMRRECSRAMTITNGĽUIR
+ICLVDCVZEAEAASARURJN
+EOAOOKSÚKCARRŇOUAALŠ
+LUNHÁNVPTEKIETRZACAO
+EARJTSATODBOHCPSRKPŠ"""
 
 def ries_riadok(r, l):
     # print(r, l)
@@ -78,6 +87,8 @@ def ries(minlength=5, maxlength=12):
 
 if __name__ == "__main__":
     zadanie = korp.word_diacritics(zadanie.lower())
+    # # lines = korp.word_diacritics(zadanie.lower()).split('\n')[1:]
+    # lines = zadanie.lower().split('\n')[1:]
     # zadanie = zadanie.lower()
     ries()
     print('DONE')
