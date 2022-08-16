@@ -1,7 +1,7 @@
 import sys
 import korp
 
-korpus = korp.setup_korpus(diacritics=False, language='cz')
+korpus = korp.setup_korpus(diacritics=False, language='sk')
 
 def najdi_slova(inputw):
     for w in korpus:
